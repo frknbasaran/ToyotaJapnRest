@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Toyota - Restorant Yönetim Sistemi</title>
+   <%- include requires %>
+</head>
+<body id="home">
+    <%- include navbar %>
+    <div class="body">
+        <div class="calendar-view">
+           
+            <h2 class="red ui header">Rezervasyon Sorgula</h2>
+            <%- include query-reservation %>
+            <br>
+            <div style="display:none" class="notify ui icon message">
+              <i class="edit icon"></i>
+              <div class="content">
+                <div class="header">
+                  Belirtilen koşullara uygun rezervasyon bulunamadı
+                </div>
+                <p>Sorgu koşullarını değiştirip tekrar deneyin</p>
+              </div>
+            </div>
+             <div class="query-view">
+            <%- include query-result-list %>
+            </div>
+            
+        </div>
+       <div class="ui small modal notifyModal">
+            <i class="close icon"></i>
+            <div class="header">
+                İşlem Yapılmadı
+            </div>
+            <div class="content">
+                Önce tarih aralığını belirtmeniz gerek
+            </div>
+            <div class="actions">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

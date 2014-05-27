@@ -1,0 +1,67 @@
+<table class="ui small table segment">
+  <thead>
+    <tr>
+    <th>Ad Soyad</th>
+    <th>Kullanıcı Adı</th>
+    <th>E-Posta</th>
+    <th>Yetki</th>
+    <!-- <th></th> -->
+    <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% for(var i=0; i<data.userList.length; i++) { %>
+<tr class="<%= data.userList[i]._id %>">
+    <td><%= data.userList[i].name %></td>
+    <td><%= data.userList[i].username %></td>
+    <td><%= data.userList[i].email %></td>
+    <%if (data.userList[i].auth > 0) {%> <td>Yönetici</td> <%}%>
+    <%if (data.userList[i].auth < 1) {%> <td>Kullanıcı</td> <%}%>
+    
+    
+<!-- <td><div data-id="<%= data.userList[i]._id %>" style="text-transform:none" class="editUser ui mini green icon button">Düzenle</div></td> -->
+    <td><div data-id="<%= data.userList[i]._id %>" style="text-transform:none" class="deleteUser ui mini red icon button">Sil</div></td>
+</tr>
+<% } %>
+</tbody>
+</table>
+
+
+<div style="display:none" class="notify ui floating message">
+  <p></p>
+</div>
+
+<div class="ui small modal askModal">
+    <i class="close icon"></i>
+    <div class="header">
+      Kullanıcının kaydını silmek üzeresiniz
+    </div>
+    <div class="content">
+      <p>Devam etmek istiyor musunuz?</p>
+    </div>
+    <div class="actions">
+      <div class="deleteCancel ui negative button">
+        Hayır
+      </div>
+      <div class="deleteOk ui positive right labeled icon button">
+        Evet
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+</div>
+
+<div class="ui small modal notifyModal">
+    <i class="close icon"></i>
+    <div class="header">
+      İşlem Tamamlandı
+    </div>
+    <div class="content">
+      <p>Kullanıcı kaydı silindi</p>
+    </div>
+    <div class="actions">
+      <div class="ui positive right labeled icon button">
+        Tamam
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+</div>

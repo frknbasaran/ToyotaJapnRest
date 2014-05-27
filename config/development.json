@@ -1,0 +1,9 @@
+{
+    "db": {
+        "USER": "frknbasaran",
+        "PASS": "123456",
+        "HOST": "localhost",
+        "PORT": "",
+        "DATABASE": "toyota"
+    }
+}

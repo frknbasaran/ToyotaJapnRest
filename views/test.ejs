@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Toyota - Restorant Yönetim Sistemi</title>
+  <script src="../js/libs/socket.io.min.js"></script>
+  <script src="../js/libs/jquery.js"></script>
+  <script>
+    $(function(){
+        var socket = io.connect('http://localhost:4444');
+        
+        $('.s').click(function(){
+                
+            socket.emit('test',{username:'frknbasaran'});
+            socket.on('message',function(data){
+                    console.log(data);
+            });
+            
+        });
+        
+        
+        $('.p').click(function(){
+            
+            $.ajax({
+                type: 'POST',
+                data: 'username=frknbasaran',
+                url : '/test',
+                success:function(result){
+                    console.log(result);
+                }
+            });
+        });
+        
+    });
+    
+  </script>
+  
+</head>
+<body id="home">
+    <button class="p">send data with post request</button>
+    <button class="s">send data on websocket</button>
+</body>
+</html>

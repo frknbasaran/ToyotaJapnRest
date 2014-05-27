@@ -1,0 +1,34 @@
+<div class="ui menu inverted">
+        <a href="/" class="item left">
+            <img src="../img/Toyota_logo.png" class="main_logo">
+        </a>
+       <div class="left menu">
+            <div class="ui dropdown item right">
+            Rezervasyonlar <i class="icon edit"></i>
+            <div class="menu">
+                <a class="item" href="/reservation"><i class="plus icon"></i> Yeni Ekle</a>
+                <%if (data.auth > 0) {%> <a class="item" href="/rezervasyon-sorgula"><i class="search icon"></i> Sorgula </a> <%}%>
+                <%if (data.auth > 0) {%> <a class="item" href="/rezervasyon-guncelle"><i class="edit icon"></i> Sil / Düzenle</a> <%}%>
+            </div>
+            </div>
+       </div>
+        
+        
+        <%if (data.auth > 0) {%> <a class="item" href="/restaurant">Restaurant İşlemleri <i class="food icon"></i></a> <%}%>
+        
+        
+        <%if (data.auth > 0)  {%> <a class="item" href="/users">Kullanıcılar <i class="icon users"></i></a> <%}%>
+    
+        <%if (data.auth > 0)  {%> <a class="item" href="/upload">Dosya Yükle <i class="file icon"></i></a> <%}%>
+        <div class="right menu">
+            <div class="ui dropdown item right">
+            <%= data.activeUser %> <i class="icon dropdown"></i>
+            <div class="menu">
+                <a class="item" href="/"><i class="help icon"></i> Yardım</a>
+                <a class="item" href="/userPanel"><i class="settings icon"></i> Panel</a>
+                <a class="item" href="/"><i class="food icon"></i> Aylık Menü</a>
+                <a class="item" href="/logout"><i class="off icon"></i>  Çıkış</a>
+            </div>
+            </div>
+       </div>
+    </div>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Toyota - Restorant Yönetim Sistemi</title>
+ <%- include requires %>
+</head>
+<body id="home">
+    <%- include navbar %>
+    <div class="body">
+        <div class="user-panel-view">
+            <h3 class="ui red header">Kullanıcı Bilgilerinizi Yönetin
+                <div class="sub header">Bilgilerinizi düzenleyin</div>
+            </h3>
+            <p>
+            Merhaba <strong><%= data.userData.name %></strong><br>
+            Sistemde kayıtlı e-posta adresiniz: <%= data.userData.email %>
+            </p>
+            <div class="panelForm ui form">
+                <h4 class="ui black header">Parolanızı güncelleyin</h4>
+                <div class="field">
+                    <label>Geçerli parola</label>
+                        <div class="ui mini left labeled input">
+                            <input tabindex="1" type="password" id="old">
+                            <div class="ui corner label">
+                                <i class="icon asterisk"></i>
+                            </div>
+                        </div>
+                    <label>Yeni parola</label>
+                        <div class="ui mini left labeled input">
+                            <input tabindex="2" type="password" id="new">
+                            <div class="ui corner label">
+                                <i class="icon asterisk"></i>
+                            </div>
+                        </div>
+                    <label>Tekrar yeni</label>
+                        <div class="ui mini left labeled input">
+                            <input tabindex="3" type="password" id="new2">
+                            <div class="ui corner label">
+                                <i class="icon asterisk"></i>
+                            </div>
+                        </div>
+                </div>
+                <div tabindex="4" class="updatePassword ui primary button small" style="text-transform:none">Parola Güncelle</div>
+        </div>
+        <div class="panelForm ui form">
+                <h4 class="ui black header">E-posta adresinizi güncelleyin</h4>
+                <div class="field">
+                    <label>Yeni e-posta</label>
+                        <div class="ui mini left labeled input">
+                            <input type="text" id="newEmail">
+                            <div class="ui corner label">
+                                <i class="icon asterisk"></i>
+                            </div>
+                        </div>
+                    <label>Parola</label>
+                        <div class="ui mini left labeled input">
+                            <input type="password" id="pass1">
+                            <div class="ui corner label">
+                                <i class="icon asterisk"></i>
+                            </div>
+                        </div>
+                    <label>Tekrar parola</label>
+                        <div class="ui mini left labeled input">
+                            <input type="password" id="pass2">
+                            <div class="ui corner label">
+                                <i class="icon asterisk"></i>
+                            </div>
+                        </div>
+                </div>
+            <div  class="updateEmail ui primary button small" style="text-transform:none">E-posta Güncelle</div>
+        </div>
+        <div style="clear:both"></div>
+        <div style="display:none" class="notify ui floating message">
+            <p></p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

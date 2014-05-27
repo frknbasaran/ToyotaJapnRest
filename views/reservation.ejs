@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Toyota - Restorant Yönetim Sistemi</title>
+    <%- include requires %>
+</head>
+<body id="home">
+    <%- include navbar %>
+    <div class="body">
+        <div class="calendar-view">
+            <h2 class="red header ui">Rezervasyon Oluştur</h2>
+            <%- include set-reservation %>
+        </div>
+        <div class="ui small modal listModal">
+            <i class="close icon"></i>
+            <div class="header">
+                Reservasyon Listesi
+            </div>
+            <div class="content">
+                <table class="ui small table segment">
+                    <thead><tr><th>Ad soyad</th><th>Öğün Tipi</th></tr></thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </div>
+            <div class="actions">
+            </div>
+        </div>
+        <div class="ui small modal notifyModal">
+            <i class="close icon"></i>
+            <div class="header">
+                İşlem Yapılmadı
+            </div>
+            <div class="content">
+                Bu tarihe rezervasyon yapamazsınız
+            </div>
+            <div class="actions">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

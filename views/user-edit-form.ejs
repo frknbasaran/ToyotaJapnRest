@@ -1,0 +1,46 @@
+<h3 class="ui red header">Kullanıcı Düzenle
+            <div class="sub header">Kayıtlı bir kullanıcının bilgilerini değiştirebilirsiniz</div>
+        </h3>
+        <div class="ui form">
+            <div class="field">
+                <label>Ad Soyad</label>
+                <div class="ui mini left labeled input">
+                    <input type="text" id="name" value="<%= data.name %>">
+                    <div class="ui corner label">
+                        <i class="icon asterisk"></i>
+                    </div>
+                </div>
+                <label>E-posta</label>
+                <div class="ui mini left labeled input">
+                    <input type="email" id="email" value="<%= data.email %>">
+                    <div class="ui corner label">
+                        <i class="icon asterisk"></i>
+                    </div>
+                </div>
+                <label>Kullanıcı Adı</label>
+                <div class="ui mini left labeled input">
+                    <input type="text" id="username" value="<%= data.username %>">
+                    <div class="ui corner label">
+                        <i class="icon asterisk"></i>
+                    </div>
+                </div>
+                <label>Parola</label>
+                <div class="ui mini left labeled input">
+                    <input type="password" id="password" value="<%= data.password %>">
+                    <div class="ui corner label">
+                        <i class="icon asterisk"></i>
+                    </div>
+                </div>
+                <label>Hesap tipi</label>    
+                <div class="ui mini left labeled input">
+                    <select class="ui selection dropdown" id="userType">
+                        <option value="0">Kullanıcı</option>
+                        <option value="1">Yönetici</option>
+                    </select>
+                </div>
+            </div>
+            <div  class="updateUser ui primary button small" data-id="<%= data._id %>" style="text-transform:none">Güncelle</div>
+            <div class="error ui inverted segment">
+                    
+            </div>
+        </div>
